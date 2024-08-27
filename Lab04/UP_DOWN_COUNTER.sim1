@@ -1,0 +1,47 @@
+<circuit version="1.0.0-SR2" rev="1449" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="MCU" CircId="mega32-142" mainComp="false" Show_id="true" Show_Val="false" Pos="396,652" rotation="0" hflip="1" vflip="1" label="mega32-142" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="../GccApplication1/GccApplication1/Debug/GccApplication1.hex" Auto_Load="true" Rst_enabled="true" Ext_Osc="false" Wdt_enabled="false" />
+
+<item itemtype="Seven Segment" CircId="Seven Segment-143" mainComp="false" Show_id="false" Show_Val="false" Pos="508,780" rotation="0" hflip="1" vflip="1" label="Seven Segment-143" idLabPos="20,-44" labelrot="0" valLabPos="-16,20" valLabRot="0" NumDisplays="1 _7seg" Color="Green" Vertical_Pins="false" CommonCathode="true" Threshold="2.4 V" MaxCurrent="0.02 A" Resistance="100 Ω" />
+
+<item itemtype="Rail" CircId="Rail-151" mainComp="false" ShowProp="Voltage" Show_id="false" Show_Val="true" Pos="340,724" rotation="0" hflip="1" vflip="1" label="Rail-151" idLabPos="-16,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" />
+
+<item itemtype="Ground" CircId="Ground-153" mainComp="false" Show_id="false" Show_Val="false" Pos="516,844" rotation="0" hflip="1" vflip="1" label="Ground-153" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Push" CircId="Push-155" mainComp="false" Show_id="false" Show_Val="false" Pos="340,780" rotation="0" hflip="1" vflip="1" label="Push-155" idLabPos="-12,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1 _Poles" />
+
+<item itemtype="Ground" CircId="Ground-158" mainComp="false" Show_id="false" Show_Val="false" Pos="292,844" rotation="0" hflip="1" vflip="1" label="Ground-158" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Push" CircId="Push-163" mainComp="false" Show_id="false" Show_Val="false" Pos="340,820" rotation="0" hflip="1" vflip="1" label="Push-163" idLabPos="-12,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1 _Poles" />
+
+<item itemtype="Node" CircId="Node-171" mainComp="false" Pos="292,820" />
+
+<item itemtype="Connector" uid="Connector-144" startpinid="Seven Segment-143-pin_g" endpinid="mega32-142-PORTC0" pointList="484,804,452,804" />
+
+<item itemtype="Connector" uid="Connector-145" startpinid="Seven Segment-143-pin_f" endpinid="mega32-142-PORTC1" pointList="484,796,452,796" />
+
+<item itemtype="Connector" uid="Connector-146" startpinid="Seven Segment-143-pin_e" endpinid="mega32-142-PORTC2" pointList="484,788,452,788" />
+
+<item itemtype="Connector" uid="Connector-147" startpinid="Seven Segment-143-pin_d" endpinid="mega32-142-PORTC3" pointList="484,780,452,780" />
+
+<item itemtype="Connector" uid="Connector-148" startpinid="Seven Segment-143-pin_c" endpinid="mega32-142-PORTC4" pointList="484,772,452,772" />
+
+<item itemtype="Connector" uid="Connector-149" startpinid="Seven Segment-143-pin_b" endpinid="mega32-142-PORTC5" pointList="484,764,452,764" />
+
+<item itemtype="Connector" uid="Connector-150" startpinid="Seven Segment-143-pin_a" endpinid="mega32-142-PORTC6" pointList="484,756,452,756" />
+
+<item itemtype="Connector" uid="Connector-152" startpinid="Rail-151-outnod" endpinid="mega32-142-RST" pointList="356,724,388,724" />
+
+<item itemtype="Connector" uid="Connector-154" startpinid="Ground-153-Gnd" endpinid="Seven Segment-143-pin_commona" pointList="516,828,516,812" />
+
+<item itemtype="Connector" uid="Connector-166" startpinid="Push-155-pinP0" endpinid="Node-171-0" pointList="324,780,292,780,292,820" />
+
+<item itemtype="Connector" uid="Connector-170" startpinid="Push-163-pinP0" endpinid="Node-171-1" pointList="324,820,292,820" />
+
+<item itemtype="Connector" uid="Connector-172" startpinid="Node-171-2" endpinid="Ground-158-Gnd" pointList="292,820,292,828" />
+
+<item itemtype="Connector" uid="Connector-173" startpinid="Push-163-switch0pinN" endpinid="mega32-142-PORTD3" pointList="356,820,372,820,372,788,388,788" />
+
+<item itemtype="Connector" uid="Connector-174" startpinid="Push-155-switch0pinN" endpinid="mega32-142-PORTD2" pointList="356,780,388,780" />
+
+</circuit>

@@ -1,0 +1,93 @@
+<circuit version="1.0.0-SR2" rev="1449" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="MCU" CircId="mega32-1" mainComp="false" Show_id="true" Show_Val="false" Pos="748,588" rotation="0" hflip="1" vflip="1" label="mega32-1" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" varList="R00/0x0000/u8,R01/0x0001/u8,R02/0x0002/u8,R03/0x0003/u8,R04/0x0004/u8,R05/0x0005/u8,R06/0x0006/u8,R07/0x0007/u8,R08/0x0008/u8,R09/0x0009/u8,R16/0x0010/uint8,R17/0x0011/u8,R26/0x001A/u8,R27/0x001B/u8" Frequency="16 MHz" Program="Lab04/Debug/Lab04.hex" Auto_Load="false" Rst_enabled="true" Ext_Osc="false" Wdt_enabled="false" />
+
+<item itemtype="Ground" CircId="Ground-47" mainComp="false" Show_id="false" Show_Val="false" Pos="660,684" rotation="0" hflip="1" vflip="1" label="Ground-47" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Seven Segment" CircId="Seven Segment-59" mainComp="false" Show_id="false" Show_Val="false" Pos="852,716" rotation="0" hflip="1" vflip="1" label="Seven Segment-59" idLabPos="20,-44" labelrot="0" valLabPos="-16,20" valLabRot="0" NumDisplays="1 _7seg" Color="Green" Vertical_Pins="false" CommonCathode="true" Threshold="2.4 V" MaxCurrent="0.02 A" Resistance="100 Ω" />
+
+<item itemtype="Ground" CircId="Ground-60" mainComp="false" Show_id="false" Show_Val="false" Pos="860,780" rotation="0" hflip="1" vflip="1" label="Ground-60" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="SwitchDip" CircId="SwitchDip-79" mainComp="false" Show_id="false" Show_Val="false" Pos="700,620" rotation="0" hflip="1" vflip="1" label="SwitchDip-79" idLabPos="-16,-44" labelrot="0" valLabPos="-16,20" valLabRot="0" Size="8 _Switches" State="256" />
+
+<item itemtype="Fixed Voltage" CircId="Fixed Voltage-129" mainComp="false" Show_id="false" Show_Val="false" Pos="684,716" rotation="0" hflip="1" vflip="1" label="Fixed Voltage-129" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Out="true" Voltage="5 V" />
+
+<item itemtype="Node" CircId="Node-108" mainComp="false" Pos="660,604" />
+
+<item itemtype="Node" CircId="Node-111" mainComp="false" Pos="660,612" />
+
+<item itemtype="Node" CircId="Node-114" mainComp="false" Pos="660,620" />
+
+<item itemtype="Node" CircId="Node-117" mainComp="false" Pos="660,628" />
+
+<item itemtype="Node" CircId="Node-119" mainComp="false" Pos="660,636" />
+
+<item itemtype="Node" CircId="Node-122" mainComp="false" Pos="660,644" />
+
+<item itemtype="Node" CircId="Node-125" mainComp="false" Pos="660,652" />
+
+<item itemtype="Connector" uid="connector-130" startpinid="Seven Segment-59-pin_b" endpinid="mega32-1-PORTC5" pointList="828,700,804,700" />
+
+<item itemtype="Connector" uid="connector-131" startpinid="Seven Segment-59-pin_c" endpinid="mega32-1-PORTC4" pointList="828,708,804,708" />
+
+<item itemtype="Connector" uid="connector-132" startpinid="Seven Segment-59-pin_d" endpinid="mega32-1-PORTC3" pointList="828,716,804,716" />
+
+<item itemtype="Connector" uid="connector-133" startpinid="mega32-1-PORTC2" endpinid="Seven Segment-59-pin_e" pointList="804,724,828,724" />
+
+<item itemtype="Connector" uid="connector-134" startpinid="Seven Segment-59-pin_f" endpinid="mega32-1-PORTC1" pointList="828,732,804,732" />
+
+<item itemtype="Connector" uid="connector-135" startpinid="mega32-1-PORTC0" endpinid="Seven Segment-59-pin_g" pointList="804,740,828,740" />
+
+<item itemtype="Connector" uid="connector-136" startpinid="Seven Segment-59-pin_commona" endpinid="Ground-60-Gnd" pointList="860,748,860,764" />
+
+<item itemtype="Connector" uid="connector-137" startpinid="Seven Segment-59-pin_a" endpinid="mega32-1-PORTC6" pointList="828,692,804,692" />
+
+<item itemtype="Connector" uid="connector-138" startpinid="SwitchDip-79-switch0-pinN" endpinid="mega32-1-PORTB0" pointList="716,596,740,596" />
+
+<item itemtype="Connector" uid="connector-139" startpinid="SwitchDip-79-switch1-pinN" endpinid="mega32-1-PORTB1" pointList="716,604,740,604" />
+
+<item itemtype="Connector" uid="connector-140" startpinid="SwitchDip-79-switch2-pinN" endpinid="mega32-1-PORTB2" pointList="716,612,740,612" />
+
+<item itemtype="Connector" uid="connector-141" startpinid="SwitchDip-79-switch3-pinN" endpinid="mega32-1-PORTB3" pointList="716,620,740,620" />
+
+<item itemtype="Connector" uid="connector-142" startpinid="SwitchDip-79-switch4-pinN" endpinid="mega32-1-PORTB4" pointList="716,628,740,628" />
+
+<item itemtype="Connector" uid="connector-143" startpinid="SwitchDip-79-switch5-pinN" endpinid="mega32-1-PORTB5" pointList="716,636,740,636" />
+
+<item itemtype="Connector" uid="connector-144" startpinid="SwitchDip-79-switch6-pinN" endpinid="mega32-1-PORTB6" pointList="716,644,740,644" />
+
+<item itemtype="Connector" uid="connector-145" startpinid="SwitchDip-79-switch7-pinN" endpinid="mega32-1-PORTB7" pointList="716,652,740,652" />
+
+<item itemtype="Connector" uid="connector-146" startpinid="SwitchDip-79-switch0-pinP" endpinid="Node-108-0" pointList="692,596,660,596,660,604" />
+
+<item itemtype="Connector" uid="connector-147" startpinid="SwitchDip-79-switch1-pinP" endpinid="Node-108-1" pointList="692,604,660,604" />
+
+<item itemtype="Connector" uid="connector-148" startpinid="Node-108-2" endpinid="Node-111-0" pointList="660,604,660,612" />
+
+<item itemtype="Connector" uid="connector-149" startpinid="SwitchDip-79-switch2-pinP" endpinid="Node-111-1" pointList="692,612,660,612" />
+
+<item itemtype="Connector" uid="connector-150" startpinid="Node-111-2" endpinid="Node-114-0" pointList="660,612,660,620" />
+
+<item itemtype="Connector" uid="connector-151" startpinid="SwitchDip-79-switch3-pinP" endpinid="Node-114-1" pointList="692,620,660,620" />
+
+<item itemtype="Connector" uid="connector-152" startpinid="Node-114-2" endpinid="Node-117-0" pointList="660,620,660,628" />
+
+<item itemtype="Connector" uid="connector-153" startpinid="SwitchDip-79-switch4-pinP" endpinid="Node-117-1" pointList="692,628,660,628" />
+
+<item itemtype="Connector" uid="connector-154" startpinid="Node-117-2" endpinid="Node-119-0" pointList="660,628,660,636" />
+
+<item itemtype="Connector" uid="connector-155" startpinid="Node-119-2" endpinid="Node-122-0" pointList="660,636,660,644" />
+
+<item itemtype="Connector" uid="connector-156" startpinid="Node-119-1" endpinid="SwitchDip-79-switch5-pinP" pointList="660,636,692,636" />
+
+<item itemtype="Connector" uid="connector-157" startpinid="Node-122-2" endpinid="Node-125-0" pointList="660,644,660,652" />
+
+<item itemtype="Connector" uid="connector-158" startpinid="Node-122-1" endpinid="SwitchDip-79-switch6-pinP" pointList="660,644,692,644" />
+
+<item itemtype="Connector" uid="connector-159" startpinid="Node-125-2" endpinid="Ground-47-Gnd" pointList="660,652,660,668" />
+
+<item itemtype="Connector" uid="connector-160" startpinid="Node-125-1" endpinid="SwitchDip-79-switch7-pinP" pointList="660,652,692,652" />
+
+<item itemtype="Connector" uid="connector-161" startpinid="Fixed Voltage-129-outnod" endpinid="mega32-1-RST" pointList="700,716,716,716,716,660,740,660" />
+
+</circuit>

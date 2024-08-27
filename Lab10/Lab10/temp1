@@ -1,0 +1,68 @@
+// master
+
+.include "m32def.inc"
+.org 0
+
+    ldi     r16, high(ramend)
+    out     sph, r16
+    ldi     r16, low(ramend)
+    out     spl, r16
+
+    call    spi_master_init
+
+    ldi     r16, 0xff
+    out     ddrc, r16
+
+    ldi     r21, 0
+    ldi     r20, 1
+    call    delay
+
+main:
+    call    master_write
+    call    master_read
+    add     r21, r20
+    call    delay
+    jmp     main
+
+spi_master_init:
+    ldi     r16, 0xb0
+    out     ddrb, r16
+    sbi     portb, pinb4
+    ldi     r16, 0x51
+    out     spcr, r16
+    ret
+
+master_read:
+    in      r20, spdr
+    ret
+
+master_write: //arg as r21
+    cbi     portb, pinb4
+    out     spdr, r21
+l1:
+    in      r16, spsr
+    andi    r16, 0x80
+    breq    l1
+
+    in      r16, spdr
+    sbi     portb, pinb4
+    ret
+
+delay:
+    ldi     r19, 0x40 //pq
+    ldi     r18, 0x00 //rs
+    ldi     r17, 0x00 //tu
+d1:
+    dec     r17
+    cpi     r17, 0xff
+    brne    d1
+
+    dec     r18
+    cpi     r18, 0xff
+    brne    d1
+
+    dec     r19
+    cpi     r19, 0xff
+    brne    d1
+
+    ret

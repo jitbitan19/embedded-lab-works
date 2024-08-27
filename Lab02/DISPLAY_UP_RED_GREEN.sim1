@@ -1,0 +1,29 @@
+<circuit version="1.0.0-SR2" rev="1449" stepSize="1000000" stepsPS="210000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Seven Segment" CircId="Seven Segment-1" mainComp="false" Show_id="false" Show_Val="false" Pos="708,660" rotation="0" hflip="1" vflip="1" label="Seven Segment-1" idLabPos="20,-44" labelrot="0" valLabPos="-16,20" valLabRot="0" NumDisplays="1 _7seg" Color="Green" Vertical_Pins="false" CommonCathode="true" Threshold="2.4 V" MaxCurrent="0.02 A" Resistance="100 Ω" />
+
+<item itemtype="MCU" CircId="mega32-2" mainComp="false" Show_id="true" Show_Val="false" Pos="604,532" rotation="0" hflip="1" vflip="1" label="mega32-2" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" varList="R00/0x0000/u8,R01/0x0001/u8,R02/0x0002/u8,R03/0x0003/u8,R04/0x0004/u8,R05/0x0005/u8,R06/0x0006/u8,R07/0x0007/uint8,R08/0x0008/uint8,R09/0x0009/uint8,R26/0x001A/uint8,R27/0x001B/uint8,R16/0x0010/uint8" Frequency="16 MHz" Program="../GccApplication1/GccApplication1/Debug/GccApplication1.hex" Auto_Load="false" Rst_enabled="true" Ext_Osc="false" Wdt_enabled="false" />
+
+<item itemtype="Rail" CircId="Rail-27" mainComp="false" ShowProp="Voltage" Show_id="false" Show_Val="true" Pos="564,604" rotation="0" hflip="1" vflip="1" label="Rail-27" idLabPos="-16,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" />
+
+<item itemtype="Ground" CircId="Ground-78" mainComp="false" Show_id="false" Show_Val="false" Pos="716,740" rotation="360" hflip="1" vflip="1" label="Ground-78" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Connector" uid="connector-134" startpinid="Rail-27-outnod" endpinid="mega32-2-RST" pointList="580,604,596,604" />
+
+<item itemtype="Connector" uid="connector-135" startpinid="mega32-2-PORTC0" endpinid="Seven Segment-1-pin_g" pointList="660,684,684,684" />
+
+<item itemtype="Connector" uid="connector-136" startpinid="mega32-2-PORTC1" endpinid="Seven Segment-1-pin_f" pointList="660,676,684,676" />
+
+<item itemtype="Connector" uid="connector-137" startpinid="mega32-2-PORTC2" endpinid="Seven Segment-1-pin_e" pointList="660,668,684,668" />
+
+<item itemtype="Connector" uid="connector-138" startpinid="mega32-2-PORTC3" endpinid="Seven Segment-1-pin_d" pointList="660,660,684,660" />
+
+<item itemtype="Connector" uid="connector-139" startpinid="mega32-2-PORTC5" endpinid="Seven Segment-1-pin_b" pointList="660,644,684,644" />
+
+<item itemtype="Connector" uid="connector-140" startpinid="mega32-2-PORTC6" endpinid="Seven Segment-1-pin_a" pointList="660,636,684,636" />
+
+<item itemtype="Connector" uid="connector-141" startpinid="mega32-2-PORTC4" endpinid="Seven Segment-1-pin_c" pointList="660,652,684,652" />
+
+<item itemtype="Connector" uid="connector-145" startpinid="Ground-78-Gnd" endpinid="Seven Segment-1-pin_commona" pointList="716,724,716,692" />
+
+</circuit>

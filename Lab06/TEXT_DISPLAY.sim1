@@ -1,0 +1,27 @@
+<circuit version="1.1.0-RC1" rev="2162" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Ground" CircId="Ground-27" mainComp="false" Show_id="false" Show_Val="false" Pos="164,700" rotation="0" hflip="1" vflip="1" label="Ground-27" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Hd44780" CircId="Hd44780-3" mainComp="false" Show_id="true" Show_Val="false" Pos="140,600" rotation="0" hflip="1" vflip="1" label="Hd44780-3" idLabPos="70,-82" labelrot="0" valLabPos="-16,20" valLabRot="0" Rows="2 _Rows" Cols="16 _Columns" />
+
+<item itemtype="MCU" CircId="mega32-4" mainComp="false" Show_id="true" Show_Val="false" Pos="12,532" rotation="0" hflip="1" vflip="1" label="mega32-4" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="Lab06/Debug/Lab06.hex" Auto_Load="true" saveEepr="true" Logic_Symbol="false" Wdt_enabled="false" varList="R16" SerialMon="-1" />
+
+<item itemtype="Rail" CircId="Rail-15" mainComp="false" ShowProp="Voltage" Show_id="false" Show_Val="true" Pos="-28,604" rotation="0" hflip="1" vflip="1" label="Rail-15" idLabPos="-16,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" />
+
+<item itemtype="Connector" uid="connector-35" startpinid="mega32-4-PORTA0" endpinid="Hd44780-3-PinRS" pointList="68,540,100,540,100,684,156,684,156,608" />
+
+<item itemtype="Connector" uid="connector-29" startpinid="mega32-4-PORTC5" endpinid="Hd44780-3-dataPin5" pointList="68,644,220,644,220,608" />
+
+<item itemtype="Connector" uid="connector-33" startpinid="Ground-27-Gnd" endpinid="Hd44780-3-PinRW" pointList="164,684,164,608" />
+
+<item itemtype="Connector" uid="connector-31" startpinid="mega32-4-PORTC7" endpinid="Hd44780-3-dataPin7" pointList="68,628,236,628,236,608" />
+
+<item itemtype="Connector" uid="connector-32" startpinid="Rail-15-outnod" endpinid="mega32-4-RST" pointList="-12,604,4,604" />
+
+<item itemtype="Connector" uid="connector-28" startpinid="mega32-4-PORTC4" endpinid="Hd44780-3-dataPin4" pointList="68,652,212,652,212,608" />
+
+<item itemtype="Connector" uid="connector-34" startpinid="mega32-4-PORTA1" endpinid="Hd44780-3-PinEn" pointList="68,548,108,548,108,676,172,676,172,608" />
+
+<item itemtype="Connector" uid="connector-30" startpinid="mega32-4-PORTC6" endpinid="Hd44780-3-dataPin6" pointList="68,636,228,636,228,608" />
+
+</circuit>

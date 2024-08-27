@@ -1,0 +1,21 @@
+<circuit version="1.0.0-SR2" rev="1449" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="MCU" CircId="mega32-1" mainComp="false" Show_id="true" Show_Val="false" Pos="748,564" rotation="0" hflip="1" vflip="1" label="mega32-1" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" varList="R15/0x000F/uint8,R16/0x0010/uint8,R17/0x0011/uint8,R18/0x0012/uint8" eeprom="160,154,8,224,14,191,15,229,13,191,168,154,14,148,13,0,168,152,14,148,13,0,12,148,5,0,15,239,31,239,47,224,0,0,42,149,233,247,26,149,209,247,10,149,185,247,8,149,0,0,0,0,0,0,0," Frequency="16 MHz" Program="AssemblerApplication1/Debug/AssemblerApplication1.hex" Auto_Load="true" Rst_enabled="true" Ext_Osc="true" Wdt_enabled="false" />
+
+<item itemtype="Led" CircId="Led-2" mainComp="false" Show_id="true" Show_Val="false" Pos="696,572" rotation="0" hflip="-1" vflip="1" label="Led-1" idLabPos="12,9" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Red" Grounded="true" Threshold="1.8 V" MaxCurrent="0.03 A" Resistance="100 Ω" />
+
+<item itemtype="Rail" CircId="Rail-9" mainComp="false" ShowProp="Voltage" Show_id="false" Show_Val="true" Pos="692,636" rotation="0" hflip="1" vflip="1" label="Rail-9" idLabPos="-16,-24" labelrot="0" valLabPos="-5,8" valLabRot="0" Voltage="5 V" />
+
+<item itemtype="Oscope" CircId="Oscope-30" mainComp="false" Show_id="false" Show_Val="false" Pos="932,636" rotation="0" hflip="1" vflip="1" label="Oscope-30" idLabPos="-90,-100" labelrot="0" valLabPos="-16,20" valLabRot="0" Basic_X="135 _Pixels" Basic_Y="135 _Pixels" BufferSize="600000 Samples" TimDiv="89409600" TimPos="0,0,0,0," VolDiv="1,1,1,0.408962," Tunnels=",,,," Trigger="0" Filter="0.1 V" Trigger="0" AutoSC="4" Tracks="1" HideCh="false,false,false,false," VolPos="0,0,0,-2.04481," />
+
+<item itemtype="Node" CircId="Node-50" mainComp="false" Pos="724,572" />
+
+<item itemtype="Connector" uid="connector-54" startpinid="Rail-9-outnod" endpinid="mega32-1-RST" pointList="708,636,740,636" />
+
+<item itemtype="Connector" uid="connector-55" startpinid="Led-2-lPin" endpinid="Node-50-0" pointList="712,572,724,572" />
+
+<item itemtype="Connector" uid="connector-56" startpinid="Node-50-2" endpinid="mega32-1-PORTB0" pointList="724,572,740,572" />
+
+<item itemtype="Connector" uid="connector-57" startpinid="Node-50-1" endpinid="Oscope-30-Pin0" pointList="724,572,724,540,828,540,828,588,844,588" />
+
+</circuit>

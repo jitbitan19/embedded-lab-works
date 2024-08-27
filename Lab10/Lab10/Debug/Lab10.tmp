@@ -1,0 +1,35 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATmega32"</DEVICE>
+ <WORKING_DIR>D:\College\Lab Works\Embedded Systems Lab\Lab10\Lab10\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>D:\College\Lab Works\Embedded Systems Lab\Lab10\Lab10\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m32def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>D:\College\Lab Works\Embedded Systems Lab\Lab10\Lab10\Debug\Lab10.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>Lab10.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>Lab10.map</FILE>
+  <FILE>Lab10.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <spi_slave_init><FILE>D:\College\Lab Works\Embedded Systems Lab\Lab10\Lab10\main.asm</FILE><LINE>59</LINE></spi_slave_init>
+  <slave_write><FILE>D:\College\Lab Works\Embedded Systems Lab\Lab10\Lab10\main.asm</FILE><LINE>76</LINE></slave_write>
+  <main><FILE>D:\College\Lab Works\Embedded Systems Lab\Lab10\Lab10\main.asm</FILE><LINE>40</LINE></main>
+  <slave_read><FILE>D:\College\Lab Works\Embedded Systems Lab\Lab10\Lab10\main.asm</FILE><LINE>67</LINE></slave_read>
+  <incr><FILE>D:\College\Lab Works\Embedded Systems Lab\Lab10\Lab10\main.asm</FILE><LINE>55</LINE></incr>
+  <decr><FILE>D:\College\Lab Works\Embedded Systems Lab\Lab10\Lab10\main.asm</FILE><LINE>52</LINE></decr>
+  <res><FILE>D:\College\Lab Works\Embedded Systems Lab\Lab10\Lab10\main.asm</FILE><LINE>47</LINE></res>
+  <display><FILE>D:\College\Lab Works\Embedded Systems Lab\Lab10\Lab10\main.asm</FILE><LINE>80</LINE></display>
+  <l2><FILE>D:\College\Lab Works\Embedded Systems Lab\Lab10\Lab10\main.asm</FILE><LINE>68</LINE></l2>
+ </LABELS>
+</ASSEMBLER_INFO>

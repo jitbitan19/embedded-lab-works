@@ -1,0 +1,510 @@
+/*
+// LED blink with different duty cycle
+
+.INCLUDE "M32DEF.INC"
+.ORG 0
+
+SBI DDRC, PINC0
+
+LDI R16, HIGH(RAMEND)
+OUT SPH, R16
+LDI R16, LOW(RAMEND)
+OUT SPL, R16
+
+
+MAIN:
+    SBI PORTC, PINC0
+    CALL DELAY1
+
+    CBI PORTC, PINC0
+    CALL DELAY1
+
+
+    JMP MAIN
+
+DELAY1:
+    LDI R17, 0x00
+    LDI R16, 0x00
+    L11: INC R16
+    BRNE L11
+    INC R17
+    BRNE L11
+    RET
+
+DELAY2:
+    LDI R17, 0x6D
+    LDI R16, 0xB6
+    L21: INC R16
+    BRNE L21
+    INC R17
+    BRNE L21
+    RET
+*/
+
+/*
+// 7 SEGMENT DISPLAY
+
+.INCLUDE "M32DEF.INC"
+.ORG 0
+
+LDI R16, 0XFF
+OUT DDRC, R16
+
+LDI R16, HIGH(RAMEND)
+OUT SPH, R16
+LDI R16, LOW(RAMEND)
+OUT SPL, R16
+
+MAIN:
+    LDI R16, 0x7E
+    OUT PORTC, R16
+    CALL DELAY1
+
+    LDI R16, 0x30
+    OUT PORTC, R16
+    CALL DELAY1
+
+    LDI R16, 0x6D
+    OUT PORTC, R16
+    CALL DELAY1
+
+    LDI R16, 0x79
+    OUT PORTC, R16
+    CALL DELAY1
+
+    LDI R16, 0x33
+    OUT PORTC, R16
+    CALL DELAY1
+
+    LDI R16, 0x5B
+    OUT PORTC, R16
+    CALL DELAY1
+
+    LDI R16, 0x5F
+    OUT PORTC, R16
+    CALL DELAY1
+
+    LDI R16, 0x70
+    OUT PORTC, R16
+    CALL DELAY1
+
+    LDI R16, 0x7F
+    OUT PORTC, R16
+    CALL DELAY1
+
+    LDI R16, 0x7B
+    OUT PORTC, R16
+    CALL DELAY1
+
+    LDI R16, 0x77
+    OUT PORTC, R16
+    CALL DELAY1
+
+    LDI R16, 0x1F
+    OUT PORTC, R16
+    CALL DELAY1
+
+    LDI R16, 0x0D
+    OUT PORTC, R16
+    CALL DELAY1
+
+    LDI R16, 0x3D
+    OUT PORTC, R16
+    CALL DELAY1
+
+    LDI R16, 0x4F
+    OUT PORTC, R16
+    CALL DELAY1
+
+    LDI R16, 0x47
+    OUT PORTC, R16
+    CALL DELAY1
+
+    JMP MAIN
+
+DELAY1:
+	LDI R18, 0xC0
+    LDI R17, 0x00
+    LDI R16, 0x00
+    L11: INC R16
+    BRNE L11
+    INC R17
+    BRNE L11
+	INC R18
+	BRNE L11
+    RET
+
+/*
+// 7 SEGMENT DISPLAY
+
+.INCLUDE "M32DEF.INC"
+.ORG 0
+
+LDI R16, 0XFF
+OUT DDRC, R16
+
+LDI R16, HIGH(RAMEND)
+OUT SPH, R16
+LDI R16, LOW(RAMEND)
+OUT SPL, R16
+
+MAIN:
+    LDI R16, 0x7E
+    OUT PORTC, R16
+    CALL DELAY1
+
+    LDI R16, 0x30
+    OUT PORTC, R16
+    CALL DELAY1
+
+    LDI R16, 0x6D
+    OUT PORTC, R16
+    CALL DELAY1
+
+    LDI R16, 0x79
+    OUT PORTC, R16
+    CALL DELAY1
+
+    LDI R16, 0x33
+    OUT PORTC, R16
+    CALL DELAY1
+
+    LDI R16, 0x5B
+    OUT PORTC, R16
+    CALL DELAY1
+
+    LDI R16, 0x5F
+    OUT PORTC, R16
+    CALL DELAY1
+
+    LDI R16, 0x70
+    OUT PORTC, R16
+    CALL DELAY1
+
+    LDI R16, 0x7F
+    OUT PORTC, R16
+    CALL DELAY1
+
+    LDI R16, 0x7B
+    OUT PORTC, R16
+    CALL DELAY1
+
+    LDI R16, 0x77
+    OUT PORTC, R16
+    CALL DELAY1
+
+    LDI R16, 0x1F
+    OUT PORTC, R16
+    CALL DELAY1
+
+    LDI R16, 0x0D
+    OUT PORTC, R16
+    CALL DELAY1
+
+    LDI R16, 0x3D
+    OUT PORTC, R16
+    CALL DELAY1
+
+    LDI R16, 0x4F
+    OUT PORTC, R16
+    CALL DELAY1
+
+    LDI R16, 0x47
+    OUT PORTC, R16
+    CALL DELAY1
+
+    JMP MAIN
+
+DELAY1:
+	LDI R18, 0xFA
+    LDI R17, 0x00
+    LDI R16, 0x00
+    L11: INC R16
+    BRNE L11
+    INC R17
+    BRNE L11
+	INC R18
+	BRNE L11
+    RET
+
+
+ */
+
+
+/*
+.INCLUDE "M32DEF.INC"
+.ORG 0
+
+LDI R16, 0xFF
+OUT DDRC, R16
+OUT DDRB, R16
+
+LDI R16, HIGH(RAMEND)
+OUT SPH, R16
+LDI R16, LOW(RAMEND)
+OUT SPL, R16
+
+MAIN:
+    //30
+    CALL D0
+    OUT PORTC, R16
+    CALL D3
+    OUT PORTB, R16
+    CALL DELAY1
+
+    //29
+    CALL D9
+    OUT PORTC, R16
+    CALL D2
+    OUT PORTB, R16
+    CALL DELAY1
+
+    //28
+    CALL D8
+    OUT PORTC, R16
+    CALL D2
+    OUT PORTB, R16
+    CALL DELAY1
+
+    //27
+    CALL D7
+    OUT PORTC, R16
+    CALL D2
+    OUT PORTB, R16
+    CALL DELAY1
+
+    //26
+    CALL D6
+    OUT PORTC, R16
+    CALL D2
+    OUT PORTB, R16
+    CALL DELAY1
+
+    //25
+    CALL D5
+    OUT PORTC, R16
+    CALL D2
+    OUT PORTB, R16
+    CALL DELAY1
+
+    //24
+    CALL D4
+    OUT PORTC, R16
+    CALL D2
+    OUT PORTB, R16
+    CALL DELAY1
+
+    //23
+    CALL D3
+    OUT PORTC, R16
+    CALL D2
+    OUT PORTB, R16
+    CALL DELAY1
+
+    //22
+    CALL D2
+    OUT PORTC, R16
+    CALL D2
+    OUT PORTB, R16
+    CALL DELAY1
+
+    //21
+    CALL D1
+    OUT PORTC, R16
+    CALL D2
+    OUT PORTB, R16
+    CALL DELAY1
+
+    //20
+    CALL D0
+    OUT PORTC, R16
+    CALL D2
+    OUT PORTB, R16
+    CALL DELAY1
+
+    //19
+    CALL D9
+    OUT PORTC, R16
+    CALL D1
+    OUT PORTB, R16
+    CALL DELAY1
+
+    //18
+    CALL D8
+    OUT PORTC, R16
+    CALL D1
+    OUT PORTB, R16
+    CALL DELAY1
+
+    //17
+    CALL D7
+    OUT PORTC, R16
+    CALL D1
+    OUT PORTB, R16
+    CALL DELAY1
+
+    //16
+    CALL D6
+    OUT PORTC, R16
+    CALL D1
+    OUT PORTB, R16
+    CALL DELAY1
+
+    //15
+    CALL D5
+    OUT PORTC, R16
+    CALL D1
+    OUT PORTB, R16
+    CALL DELAY1
+
+    //14
+    CALL D4
+    OUT PORTC, R16
+    CALL D1
+    OUT PORTB, R16
+    CALL DELAY1
+
+    //13
+    CALL D3
+    OUT PORTC, R16
+    CALL D1
+    OUT PORTB, R16
+    CALL DELAY1
+
+    //12
+    CALL D2
+    OUT PORTC, R16
+    CALL D1
+    OUT PORTB, R16
+    CALL DELAY1
+
+    //11
+    CALL D1
+    OUT PORTC, R16
+    CALL D1
+    OUT PORTB, R16
+    CALL DELAY1
+
+    //10
+    CALL D0
+    OUT PORTC, R16
+    CALL D1
+    OUT PORTB, R16
+    CALL DELAY1
+
+    //9
+    CALL D9
+    OUT PORTC, R16
+    CALL D0
+    OUT PORTB, R16
+    CALL DELAY1
+
+    //8
+    CALL D8
+    OUT PORTC, R16
+    CALL D0
+    OUT PORTB, R16
+    CALL DELAY1
+
+    //7
+    CALL D7
+    OUT PORTC, R16
+    CALL D0
+    OUT PORTB, R16
+    CALL DELAY1
+
+    //6
+    CALL D6
+    OUT PORTC, R16
+    CALL D0
+    OUT PORTB, R16
+    CALL DELAY1
+
+    //5
+    CALL D5
+    OUT PORTC, R16
+    CALL D0
+    OUT PORTB, R16
+    CALL DELAY1
+
+    //4
+    CALL D4
+    OUT PORTC, R16
+    CALL D0
+    OUT PORTB, R16
+    CALL DELAY1
+
+    //3
+    CALL D3
+    OUT PORTC, R16
+    CALL D0
+    OUT PORTB, R16
+    CALL DELAY1
+
+    //2
+    CALL D2
+    OUT PORTC, R16
+    CALL D0
+    OUT PORTB, R16
+    CALL DELAY1
+
+    //1
+    CALL D1
+    OUT PORTC, R16
+    CALL D0
+    OUT PORTB, R16
+    CALL DELAY1
+
+    //0
+    CALL D0
+    OUT PORTC, R16
+    CALL D0
+    OUT PORTB, R16
+    CALL DELAY1
+
+    JMP MAIN
+
+D0:
+    LDI R16, 0x7E
+    RET
+D1:
+    LDI R16, 0x30
+    RET
+D2:
+    LDI R16, 0x6D
+    RET
+D3:
+    LDI R16, 0x79
+    RET
+D4:
+    LDI R16, 0x33
+    RET
+D5:
+    LDI R16, 0x5B
+    RET
+D6:
+    LDI R16, 0x5F
+    RET
+D7:
+    LDI R16, 0x70
+    RET
+D8:
+    LDI R16, 0x7F
+    RET
+D9:
+    LDI R16, 0x7B
+    RET
+
+DELAY1:
+	LDI R18, 0xC0
+    LDI R17, 0x00
+    LDI R16, 0x00
+    L11: INC R16
+    BRNE L11
+    INC R17
+    BRNE L11
+	INC R18
+	BRNE L11
+    RET
+
+ */

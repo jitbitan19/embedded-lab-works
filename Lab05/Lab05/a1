@@ -1,0 +1,16 @@
+//negative slopw sawtooth
+.include "m32def.inc"
+
+.org 0
+    ldi r16, high(ramend)
+    out sph, r16
+    ldi r16, low(ramend)
+    out spl, r16
+
+    ldi r16, 0xff
+    out ddrc, r16
+
+main:
+    dec r16
+    out portc, r16
+    jmp main

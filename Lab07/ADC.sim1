@@ -1,0 +1,43 @@
+<circuit version="1.1.0-RC1" rev="2162" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Rail" CircId="Rail-5" mainComp="false" ShowProp="Voltage" Show_id="false" Show_Val="true" Pos="596,636" rotation="0" hflip="1" vflip="1" label="Rail-5" idLabPos="-16,-24" labelrot="0" valLabPos="-15.9887,-7.61858" valLabRot="0" Voltage="5 V" />
+
+<item itemtype="Ground" CircId="Ground-26" mainComp="false" Show_id="false" Show_Val="false" Pos="788,716" rotation="0" hflip="1" vflip="1" label="Ground-26" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Rail" CircId="Rail-7" mainComp="false" ShowProp="Voltage" Show_id="false" Show_Val="true" Pos="724,636" rotation="0" hflip="-1" vflip="1" label="Rail-7" idLabPos="-16,-24" labelrot="0" valLabPos="-18.0651,-7.88922" valLabRot="0" Voltage="5 V" />
+
+<item itemtype="Voltage Source" CircId="Voltage Source-2" mainComp="false" ShowProp="MaxValue" Show_id="false" Show_Val="true" Pos="768,612" rotation="0" hflip="1" vflip="1" label="Voltage Source-2" idLabPos="-32,-48" labelrot="0" valLabPos="-8,27.264" valLabRot="0" Running="true" Value_Volt="1.75 V" MaxValue="5 V" MinValue="0 V" />
+
+<item itemtype="DAC" CircId="DAC-9" mainComp="false" Show_id="false" Show_Val="false" Pos="732,692" rotation="0" hflip="1" vflip="-1" label="DAC-9" idLabPos="-16,-80" labelrot="0" valLabPos="-16,20" valLabRot="0" Num_Bits="8 _Bits" Vref="5 V" Input_High_V="2.5 V" Input_Low_V="2.5 V" Input_Imped="1000 MΩ" Invert_Inputs="false" pd_n="1 _Gates" Tpd_ps="10000 ps" Tr_ps="3000 ps" Tf_ps="4000 ps" />
+
+<item itemtype="Voltimeter" CircId="Voltimeter-24" mainComp="false" Show_id="false" Show_Val="false" Pos="780,676" rotation="0" hflip="1" vflip="1" label="Voltimeter-24" idLabPos="-24,-40" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="MCU" CircId="mega32-1" mainComp="false" Show_id="true" Show_Val="false" Pos="636,564" rotation="0" hflip="1" vflip="1" label="mega32-1" idLabPos="1.854,167.872" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="Lab07/Debug/Lab07.hex" Auto_Load="true" saveEepr="true" Logic_Symbol="false" Wdt_enabled="false" varList="ADCH,ADCL,ADCSRA,R16,R17,R18,ADMUX" SerialMon="-1" />
+
+<item itemtype="Connector" uid="Connector-127" startpinid="DAC-9-in1" endpinid="mega32-1-PORTC1" pointList="708,708,692,708" />
+
+<item itemtype="Connector" uid="Connector-160" startpinid="Voltage Source-2-outPin" endpinid="mega32-1-PORTA0" pointList="796,628,812,628,812,572,692,572" />
+
+<item itemtype="Connector" uid="Connector-128" startpinid="mega32-1-PORTC4" endpinid="DAC-9-in4" pointList="692,684,708,684" />
+
+<item itemtype="Connector" uid="Connector-129" startpinid="DAC-9-in7" endpinid="mega32-1-PORTC7" pointList="708,660,692,660" />
+
+<item itemtype="Connector" uid="Connector-125" startpinid="DAC-9-in0" endpinid="mega32-1-PORTC0" pointList="708,716,692,716" />
+
+<item itemtype="Connector" uid="Connector-131" startpinid="mega32-1-PORTC6" endpinid="DAC-9-in6" pointList="692,668,708,668" />
+
+<item itemtype="Connector" uid="Connector-8" startpinid="Rail-7-outnod" endpinid="mega32-1-PORTV1" pointList="708,636,692,636" />
+
+<item itemtype="Connector" uid="Connector-124" startpinid="mega32-1-PORTC2" endpinid="DAC-9-in2" pointList="692,700,708,700" />
+
+<item itemtype="Connector" uid="Connector-126" startpinid="DAC-9-in3" endpinid="mega32-1-PORTC3" pointList="708,692,692,692" />
+
+<item itemtype="Connector" uid="Connector-25" startpinid="DAC-9-out0" endpinid="Voltimeter-24-lPin" pointList="756,716,772,716,772,692" />
+
+<item itemtype="Connector" uid="Connector-6" startpinid="Rail-5-outnod" endpinid="mega32-1-RST" pointList="612,636,628,636" />
+
+<item itemtype="Connector" uid="Connector-27" startpinid="Ground-26-Gnd" endpinid="Voltimeter-24-rPin" pointList="788,700,788,692" />
+
+<item itemtype="Connector" uid="Connector-130" startpinid="DAC-9-in5" endpinid="mega32-1-PORTC5" pointList="708,676,692,676" />
+
+</circuit>

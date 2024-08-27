@@ -1,0 +1,6 @@
+
+AVRASM ver. 2.2.8  D:\College\Lab Works\Embedded Systems Lab\Test\Test\main.asm Mon Apr 15 15:12:32 2024
+
+[builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m32def.inc'
+D:\College\Lab Works\Embedded Systems Lab\Test\Test\main.asm(1): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m32def.inc'
+D:\College\Lab Works\Embedded Systems Lab\Test\Test\main.asm(11): error: syntax error, unexpected ''

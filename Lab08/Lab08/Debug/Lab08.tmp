@@ -1,0 +1,30 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATmega32"</DEVICE>
+ <WORKING_DIR>D:\College\Lab Works\Embedded Systems Lab\Lab08\Lab08\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>D:\College\Lab Works\Embedded Systems Lab\Lab08\Lab08\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m32def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>D:\College\Lab Works\Embedded Systems Lab\Lab08\Lab08\Debug\Lab08.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>Lab08.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>Lab08.map</FILE>
+  <FILE>Lab08.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <start><FILE>D:\College\Lab Works\Embedded Systems Lab\Lab08\Lab08\main.asm</FILE><LINE>7</LINE></start>
+  <int_isr0><FILE>D:\College\Lab Works\Embedded Systems Lab\Lab08\Lab08\main.asm</FILE><LINE>55</LINE></int_isr0>
+  <main><FILE>D:\College\Lab Works\Embedded Systems Lab\Lab08\Lab08\main.asm</FILE><LINE>35</LINE></main>
+  <l1><FILE>D:\College\Lab Works\Embedded Systems Lab\Lab08\Lab08\main.asm</FILE><LINE>43</LINE></l1>
+ </LABELS>
+</ASSEMBLER_INFO>

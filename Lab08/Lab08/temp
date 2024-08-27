@@ -1,0 +1,42 @@
+.include "m32def.inc"
+.org 0
+    ldi r16, high(ramend)
+    out sph, r16
+    ldi r16, low(ramend)
+    out spl, r16
+
+    ldi r16, 0x00
+    out ddra, r16
+    out ddrd, r16
+    ldi r16, 0xff
+    out ddrc, r16
+    out portd, r16
+    out ddrb, r16
+    ldi r19, 0x20
+
+    ldi r16, 0x69
+    out tccr0, r16
+
+main:
+    in r20, pind // r20 is mux reg
+    com r20
+    or r20, r19
+    out admux, r20
+
+    ldi r16, 0x87
+    out adcsra, r16
+
+    ldi r16, 0xc7
+    out adcsra, r16
+l1:
+    in r16, adcsra
+    andi r16, 0b00010000
+    breq l1
+    in r17, adch
+
+    out portc, r17
+    out ocr0, r17
+    ldi r16, 0x97
+    out adcsra, r16
+
+    jmp main

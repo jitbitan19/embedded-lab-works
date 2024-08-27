@@ -1,0 +1,90 @@
+1 .INCLUDE "M32DEF.INC"
+2 .ORG 0
+3 
+4     LDI R16, HIGH(RAMEND)
+5     OUT SPH, R16
+6     LDI R16, LOW(RAMEND)
+7     OUT SPL, R16
+8 
+9     LDI R16, 0x7E //Seven Segment Bits for 0
+10     MOV R0, R16
+11     LDI R16, 0x30 //Seven Segment Bits for 1
+12     MOV R1, R16
+13     LDI R16, 0x6D //Seven Segment Bits for 2
+14     MOV R2, R16
+15     LDI R16, 0x79 //Seven Segment Bits for 3
+16     MOV R3, R16
+17     LDI R16, 0x33 //Seven Segment Bits for 4
+18     MOV R4, R16
+19     LDI R16, 0x5B //Seven Segment Bits for 5
+20     MOV R5, R16
+21     LDI R16, 0x5F //Seven Segment Bits for 6
+22     MOV R6, R16
+23     LDI R16, 0x70 //Seven Segment Bits for 7
+24     MOV R7, R16
+25     LDI R16, 0x7F //Seven Segment Bits for 8
+26     MOV R8, R16
+27     LDI R16, 0x7B //Seven Segment Bits for 9
+28     MOV R9, R16
+29 
+30     LDI R16, 0XFF
+31     OUT DDRC, R16
+32     OUT DDRB, R16
+33     OUT DDRA, R16
+34 
+35 MAIN:
+36     LDI R16, 0x01
+37     OUT PORTA, R16
+38     CALL MODXY
+39 
+40     LDI R16, 0x02
+41     OUT PORTA, R16
+42     CALL MODXY
+43 
+44     JMP MAIN
+45 
+46 MODXY:
+47     LDI YL, 0x04 // set the tens place
+48     LDI XL, 0x02 // set the unit place
+49 N1:
+50     CALL DISPLAY
+51     CALL DELAY
+52     DEC XL
+53     CPI XL, 0xFF
+54     BRNE N1
+55 
+56     DEC YL
+57     CPI YL, 0xFF
+58     BRNE RXL
+59     RET
+60 
+61 RXL:
+62     LDI XL, 0x09
+63     JMP N1
+64 
+65 DISPLAY:
+66     LD R16, Y
+67     OUT PORTB, R16
+68     LD R16, X
+69     OUT PORTC, R16
+70     RET
+71 
+72 // A generic (PQ RS TU)_16 counter
+73 DELAY:
+74     LDI R19, 0x0A //PQ
+75     LDI R18, 0xFF //RS
+76     LDI R17, 0xFF //TU
+77 L1:
+78     DEC R17
+79     CPI R17, 0xFF
+80     BRNE L1
+81 
+82     DEC R18
+83     CPI R18, 0xFF
+84     BRNE L1
+85 
+86     DEC R19
+87     CPI R19, 0xFF
+88     BRNE L1
+89 
+90     RET

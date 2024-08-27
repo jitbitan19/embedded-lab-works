@@ -1,0 +1,50 @@
+.INCLUDE "M32DEF.INC"
+.ORG 0
+
+    LDI R16, HIGH(RAMEND)
+    OUT SPH, R16
+    LDI R16, LOW(RAMEND)
+    OUT SPL, R16
+
+    LDI R16, 0x00
+    OUT DDRB, R16
+    LDI R16, 0xFF
+    OUT PORTB, R16
+    OUT DDRC, R16
+
+    LDI R16, 0x7E
+    MOV R0, R16
+    LDI R16, 0x30
+    MOV R1, R16
+    LDI R16, 0x6D
+    MOV R2, R16
+    LDI R16, 0x79
+    MOV R3, R16
+    LDI R16, 0x33
+    MOV R4, R16
+    LDI R16, 0x5B
+    MOV R5, R16
+    LDI R16, 0x5F
+    MOV R6, R16
+    LDI R16, 0x70
+    MOV R7, R16
+    LDI R16, 0x7F
+    MOV R8, R16
+    LDI R16, 0x7B
+    MOV R9, R16
+
+MAIN:
+    IN R17, PINB
+    LDI R18, 0x08
+    LDI XH, 0x00
+    LDI XL, 0x00
+L1:
+    LSL R17
+    ADC XL, XH
+    DEC R18
+    BRNE L1
+    
+    LD R16, X
+    OUT PORTC, R16
+
+    JMP MAIN
